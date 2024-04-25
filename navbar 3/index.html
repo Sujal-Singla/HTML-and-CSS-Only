@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+        nav{
+            height: 5rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            font-size: 20px;
+           gap: 2rem;;
+            border-radius: 10px;
+            background-color: rgb(241, 241, 241);
+        }
+        .slider
+        {
+            height: 100%;
+            width: 20%;
+            background-color: purple;
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            border-radius: 10px;
+           
+        }
+        label{
+            z-index: 1;
+        }
+
+        #Code:checked ~ nav .slider{
+            left: 40%;
+        }
+        #Blog:checked ~ nav .slider{
+            left: 20%;
+        }
+        #Help:checked ~ nav .slider{
+            left: 60%;
+        }
+        #About:checked ~ nav .slider{
+            left: 80%;
+        }
+        label:hover{
+            background-color: rgba(128, 0, 128, 0.158);
+            transition: all 0.6s ease;
+        }
+        label{
+            height: 100%;
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input[type=radio]{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" name="slider" id="Home" checked>
+        <input type="radio" name="slider" id="Code">
+        <input type="radio" name="slider" id="Blog">
+        <input type="radio" name="slider" id="Help">
+        <input type="radio" name="slider" id="About">
+    
+        <nav>
+        
+    <div class="slider"></div>
+                <label for="Home">
+                    <i class="fa-solid fa-house"></i>Home
+                </label>
+              <label for="Blog">
+                <i class="fa-solid fa-paperclip"></i>Blog
+              </label>
+              <label for="Code">
+                 <i class="fa-solid fa-code"></i>code
+              </label>
+              <label for="Help">
+                <i class="fa-regular fa-envelope"></i>Help
+              </label>
+               <label for="About">
+                <i class="fa-regular fa-user"></i>About
+               </label>
+                
+           
+        </nav>
+    </div>
+   
+</body>
+</html>

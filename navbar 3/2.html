@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+
+        }
+      .fa-solid{
+        z-index: 1;
+        color: black;
+      }
+   /*   .slider{
+        height: 100%;
+        background-color: purple;
+        width: 20%;
+        position: absolute;
+     } */
+    </style>
+</head>
+<body>
+    <input type="radio" name="slider" id="Home">
+    <input type="radio" name="slider" id="Code">
+    <input type="radio" name="slider" id="Blog">
+    <input type="radio" name="slider" id="Help">
+    <input type="radio" name="slider" id="About">
+
+    <nav>     
+<div class="slider"></div>
+            <label for="Home" class="Home">
+                <i class="fa-solid fa-house"></i>Home
+            </label>
+          <label for="Blog" class="Blog">
+           <i class="fa-solid fa-paperclip"></i>Blog
+          </label>
+          <label for="Code" class="Code">
+             <i class="fa-solid fa-code"></i>code
+          </label>
+          <label for="Help" class="Help">
+            <i class="fa-regular fa-envelope"></i>Help
+          </label>
+           <label for="About" class="About">
+            <i class="fa-regular fa-user"></i>About
+           </label>
+            
+       
+    </nav>
+</body>
+</html>

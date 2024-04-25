@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Pages</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    min-width: 100vw;    
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+    .container{
+        height: 100%;
+        width: 100%;
+       
+
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    label{
+        transform-origin: left;
+            transform: scaleX(1);
+            position: relative;
+           /*  width: auto; */
+           /*  background-color: green; */
+    }
+    .nav
+    {
+       border: 1px solid wheat;
+        border-radius:50px;
+        height: 3rem;
+        width: 50rem;
+        display: flex;
+         justify-content: center;
+         align-items: center;
+        gap: 2.5rem;
+        font-size: 1.5rem;
+        margin: 2rem auto;
+        
+    }
+   
+    input[type="radio"]:checked + label{
+    background-color: rgb(24, 163, 156);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 30px;
+    transform-origin: left;
+    transform: scalex(1.1);
+    transition: all 0.2s ease;
+    
+   }
+   .hero{
+   
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url('https://i.pinimg.com/originals/3f/79/f8/3f79f8fad2ab335c18b997959589e6a0.png');
+    background-size:30rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    margin: 3rem;
+    gap: 1rem;
+    right: 1rem;
+    position: relative;
+    animation: 1s linear 0.4s alternate  image;
+   
+   }
+   .hero .left{
+   
+    width: 40rem;
+    height: 40rem;
+    font-size: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(206, 206, 36);
+    animation-name: left;
+    animation-duration: 01s;
+    animation-timing-function: linear;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    position: relative;
+    /* left: -2rem; */
+    left: 2rem;
+    animation-direction: alternate;
+    
+   }
+   .hero input[type="radio"]{
+    display: block;
+   }
+   .first-page{
+    height: 100%;
+   
+    display: flex;
+    color: black;
+    width: 100%;
+    justify-content: space-between;
+
+   }
+   
+ .hero aside{
+    height: 100%;
+ }
+
+    .labels
+    {
+        width: 0.1rem;
+     
+    }
+
+    .right{
+        width: 40rem;
+        font-size: 30px;
+        position: relative;
+        left: 2rem;
+        top: 10%;
+        color:rgb(24, 163, 156);
+        animation: 1s linear 0.6s 1 alternate right;
+    }
+
+    @keyframes left{
+    0%{
+        left: -2rem;
+        opacity: 0;
+        
+            }
+            100%{
+                left: 2rem;
+               
+            }
+        
+    }
+    @keyframes right{
+    0%{
+        left: -2rem;
+       /*  opacity: 0; */
+        
+            }
+            100%{
+                left: 2rem;
+               
+            }
+        
+    }
+    @keyframes image {
+        from{
+            right:0rem;
+            opacity: 0;
+           
+        }
+to{
+    right: 1rem;
+    
+}
+    }
+    .labels{
+        position: relative;
+    }
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav">
+                <div class="blink">
+                    <input type="radio" id="blink"  name="features">
+                <label for="blink">
+                    Blink
+                </label>
+                </div>
+                <div class="horizontal">
+                    <input type="radio" id="Horizontal Scroll" name="features">
+                <label for="Horizontal Scroll">
+                    Horizontal Scroll
+                </label>
+                </div>
+               
+
+                    <div class="backwards">
+                        <input type="radio" id="Backwards Scroll" name="features">
+                        <label for="Backwards Scroll">
+                            Backwards Scroll
+                        </label>
+                       
+                    </div>
+
+                    <div class="zoom">
+                        <input type="radio" id="Zoom Scroll" name="features">
+                <label for="Zoom Scroll">
+                    Zoom Scroll
+                </label>
+                    </div>
+
+                
+
+            </div>
+        </nav>
+
+
+        <div class="hero">
+          
+                <div class="first-page">
+               
+                    <aside>
+                        <div class="left">
+                            Rose
+                        </div>
+                    </aside>
+                        <div class="right">
+                           <p>Like the flower itself, the history of the rose is very colorful. Roses have been naturally growing for over 35 million years! However, they were not known to be cultivated until about 5,000 years ago. Their usage began not just as a decorative touch to one’s home, but they were also used for medicinal purposes and to make perfumes, and their petals were even used as confetti for festive occasions. Getting your roses into water quickly is the first step in caring for them. Fill a vase three-fourths full of fresh, cool tap water. The roses will absorb the water, soaking up the nutrients that will travel up to the bloom and create a lively flower. Check the water level in your rose’s vase every day and add more water as needed. Shop these classic flowers for Valentine’s Day!</p>
+                        </div>
+                        
+                       
+                </div>
+                <div class="labels">
+                   
+                    <a href="page1.html" target="_blank"> <input type="radio" name="page" value="page1" id="page1" >
+                        <label for="page1" >
+                            
+                        </label></a>
+                </div>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flipper{
+            border: 1px solid black;
+            height: 27rem;
+            width: 22rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            
+           
+        }
+        .container{
+           
+            height: 27rem;
+            width: 22rem;
+            
+            perspective: 1000px;
+           
+        }
+        .header{
+            height: 20%;
+            
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             background: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+            
+            }
+        .header h1{
+            font-size: 40px;
+            color: white;
+        }
+        .info{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           /*  flex-direction: column; */
+            margin: 1rem;
+            /* gap: 1rem; */
+           
+            /* max-height:25%; */
+            max-width: 90%;
+            transition: all 0.6s ease-in;
+        }
+        .info label{
+            position: absolute;
+         color: grey;
+            top: 50%;
+            transform: translatey(-50%);
+            left: 20px;
+            pointer-events: none;
+            background-color: #fff;
+
+            
+        }
+      
+     .info input
+      {
+        
+            height: 100%;
+            border-radius: 40px;
+            width: 100%;
+            padding: 1rem;
+              font-size: 1.2rem;
+              border: 1px solid black;
+              outline: none;
+              transition: all 0.6s ease-in;
+        } 
+        .info input:focus ~label{
+            color: black;
+            top: 0%;
+            transition: all 0.2s ease-in;
+        }
+        .info input:focus {
+            transform: rotate(none);
+        }
+        .remember
+            {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            text-decoration: none;
+        }
+        .remember a{
+            text-decoration: none;
+            color: blue;
+        }
+        .login{
+            height: 10%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            border-radius: 50px;
+        }
+       .login button{
+            height: 100%;
+            width: 90%;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        }
+        .forgot-password{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            text-decoration: none;
+            gap: 1rem;
+        }
+        .forgot-password a{
+            text-decoration: none;
+            color: blue;
+        }
+        .flipper:hover{
+            scale: 1.1;
+          
+            transition: all 0.1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flipper">
+            <div class="header">
+                <h1>Login Form</h1>
+            </div>
+    
+    
+          <div class="info">
+           
+            <input type="text" >
+           <label>Email Address</label>
+        </div>
+           <div class="info">
+            <input type="password"  >
+            <label >Password</label>
+           </div>
+           
+      
+           
+    
+           <div class="remember">
+            <input type="checkbox" id="remember me">
+            <label for="remember me">Remember Me</label>
+            <a href="#">Forgot Password</a>
+           </div>
+    
+    
+    
+           <div class="login">
+            <button>login</button>
+           </div>
+    
+    
+    
+           <div class="forgot-password">
+            <p>Not a Member?</p>
+            <a href="#">SignUp Now!</a>        
+           </div>
+        </div>
+        </div>
+    </div>
+   
+</body>
+</html>

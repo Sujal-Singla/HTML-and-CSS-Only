@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-image: url('pngtree-pink-geometric-circle-gradient-fashion-background-image_722289.jpg');
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            height: 90%;
+            width: 90%;
+           box-shadow: 0px 0px 5px -1px rgb(0, 0, 0), inset 0px 0px 10px -3px white ;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+           flex-direction: column;
+           background-color: rgba(248, 75, 104, 0.164);
+            backdrop-filter: blur(10px);
+        }
+        nav{
+            width: 100%;
+           
+        }
+        .nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img{
+            height: 90px;
+            
+        }
+        .options{
+            display: flex;
+            gap: 2rem;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(65, 64, 64);
+            font-size: 20px;
+        }     
+        .buttons{
+            width: 13rem;
+           
+
+        } 
+        input{
+            border-radius: 10px;
+            padding: 0.5rem;
+            border:none;
+            margin-left: 1rem;
+            background: linear-gradient(135deg, white, rgb(253, 0, 42));
+            color: white;
+            cursor: pointer;
+        }
+        aside{
+            width: 100%;
+            height: 100%;
+            text-wrap: wrap;
+           
+        }
+        .hero{
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            height: 100%;
+            gap: 1.5rem;
+            text-wrap: wrap;
+        }
+        .bold{
+            width: 35rem;
+            font-size: 50px;
+            margin-left: 3.5rem;
+
+        }
+        .small{
+            width: 45rem;
+            margin-left: 3.5rem;
+            text-wrap: wrap;
+        }
+        footer{
+            width: 100%;
+           
+        }
+        .footer{
+            display: flex;
+            padding: 1.5rem;
+            align-items: center;
+            justify-content: end;
+            gap: 2rem;
+        }
+        hr{
+            width: 2rem;
+            height: 1px;
+           border: 1px solid black;
+        }
+        .footer p{
+            font-size: 30px;
+           
+        }
+        
+        .icon
+        {
+            border: 1px solid black;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+        a:hover{
+            color: rgb(241, 241, 241);
+            transition: color 0.4s ease;
+        }
+        input:hover{
+            scale: 0.9;
+            transition: scale 0.2s ease;
+        }
+        .fa-bars{
+            display: none;
+        }
+        @media  screen and (max-width:935px) {
+            .nav{
+                flex-direction: column;
+                justify-content: start;
+            }
+            .small{
+                width: 35rem;
+            }
+        }
+        @media  screen and (max-width:640px) {
+            .nav{
+                flex-direction: column;
+                justify-content: start;
+                
+            }
+            .bold{
+                width: 25rem;
+            }
+            .small{
+                width: 25rem;
+            }
+        }
+        @media  screen and (max-width:500px) {
+            .nav{
+                flex-direction: row;
+                justify-content: start;
+            }
+            .fa-bars{
+                display: block;
+            }
+            .options{
+                display: none;
+            }
+            .bold{
+                width: 15rem;
+            }
+            .small{
+                width: 15rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav">
+                <div class="logo">
+                    <img src="images__3_-removebg-preview.png" >
+                </div>
+                <div class="options">
+                    <a href="#">Home</a>
+                    <a href="#">Latest</a>
+                    <a href="#">Offers</a>
+                    <a href="#">Services</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="buttons">
+                   <input type="submit" value="Login">
+                   <input type="submit" value="Register">
+                </div>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <aside>
+            <div class="hero">
+                <div class="bold">
+                    <p>Learn to Enjoy,</p>
+                <p>Every Moment Of your Life</p>
+                </div>
+                <div class="small">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis harum aliquid quam dolor quibusdam, cumque in aspernatur, veritatis amet quia tempora reiciendis ab repellendus. Aspernatur sapiente cupiditate ducimus eius vel unde doloremque qui quibusdam modi, placeat omnis quia fugiat laudantium.</p>
+                </div>
+            </div>
+        </aside>
+        <footer>
+            <div class="footer">
+                <hr>
+                <p>Play Video</p>
+                <div class="icon">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

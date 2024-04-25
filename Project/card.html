@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+      body{
+        height: 100vh;
+        width: 100vw;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("A7UbR3.jpg");
+        background-size: cover;
+        background-repeat: no repeat;
+      }
+      .container
+      {
+        height: 450px;
+        width: 350px;
+        background: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        position:relative;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0);
+        border: 2px solid rgba(0, 255, 0, 0); /* Predefined border color set to transparent */
+        transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+      
+.container:hover {
+    
+    border-color: rgba(255, 255, 255, 0.415);
+    box-shadow: 0px 0px 10px -1px rgb(255, 255, 255);
+}
+
+
+    
+      .imag {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        top: 20px; 
+        border-radius: 100px;
+        border: 4px solid green;
+            }
+            
+      .topnotch{
+            width: 100% ;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.104);
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(0, 255, 0, 0);
+            transition: box-shadow 0.5s ease, border-color 0.5s ease;
+      }
+     
+      .topnotch:hover {
+    
+            border-color: rgba(255, 255, 255, 0.415);
+            box-shadow: 0px 0px 10px -1px rgb(255, 255, 255);
+    
+}
+      .h2{
+        position: relative;
+        top: 20px;
+        color: white;
+      }
+      .p{
+        position: relative;
+        font-size: 20px;
+        color: white;    
+    }
+      .imgs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 20px;
+        width: 50%;
+        position: relative;
+       
+       }
+      
+    .imgs img{
+        height: 25px;
+        width: 25px;
+       
+    }
+    
+    .buttons{
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .subscribe{
+        position: relative;
+        right: 30px;
+        height: 40px;
+        width: 100px;
+        border-radius: 50px;
+        background: rgba(0, 0, 255, 0.26);
+        color: white;
+        transition:  box-shadow 0.5s ease, border-color 0.5s ease, width 0.5s ease, height 0.5s ease, font-size 0.5s ease;
+    }
+    .subscribe:hover{
+        border-color: rgb(255, 255, 255);
+        width: 110px ;
+        height: 45px;
+        font-size: 17px;
+        border-color: rgba(255, 255, 255, 0.415);
+        box-shadow: 0px 0px 10px -1px rgb(255, 255, 255);
+
+    }
+    .Message{
+        position: relative;
+    color: white;         
+        left: 30px;
+        height: 40px;
+        width: 100px;
+        border-radius: 50px;
+        background: rgba(0, 0, 255, 0.26);
+        transition:  box-shadow 0.5s ease, border-color 0.5s ease, width 0.5s ease, height 0.5s ease, font-size 0.5s ease;
+    }
+    .Message:hover{
+        border-color: rgb(255, 255, 255);
+        width: 110px ;
+        height: 45px;
+        font-size: 17px;
+        border-color: rgba(255, 255, 255, 0.415);
+        box-shadow: 0px 0px 10px -1px rgb(255, 255, 255);
+
+    }
+    .spans{
+        position: relative;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        width: 300px;
+        
+    }
+    .span{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 500px;
+    }
+    
+    .span img{
+        height: 20px;
+        width: 20px;
+        position: relative;
+        bottom: 45px;
+        transition:  box-shadow 0.5s ease, border-color 0.5s ease, width 0.5s ease, height 0.5s ease, font-size 0.5s ease;
+    }
+   
+    #img1{
+        left: 5px;
+    }
+    #img2{
+        right: 25px;
+    }
+    #img3{
+        right: 52px
+    }
+    @media screen and (max-width: 350px) {
+    .container {
+        width: 90%;
+        height: 600px;
+    }
+
+    .topnotch {
+        height: 30%;
+        width: 90%;
+    }
+
+    .subscribe,
+    .Message {
+        width: 90%; 
+    }
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="topnotch"></div>
+        
+        <img src="businessperson-computer-icons-avatar-passport.jpg"  class="imag" />
+    
+       
+        
+        <h2 class="h2">Act On PC</h2>
+        <p class="p">Youtuber & Coder</p>
+        <div class="imgs">
+            <img class="img1" src="download (1).png" />
+            <img class="img2" src="download.png" />
+            <img class="img3" src="instagram-app-icon-social-media-logo-vector-illustration_277909-403.avif" />
+            <img class="img4" src="Youtube_logo.png" />
+
+        </div>
+        <div class="buttons">
+            <button class="subscribe">Subscribe</button>
+            <button class="Message">Message</button>
+        </div>
+        <div class="spans">
+            <span>60k</span>
+            <span>20k</span>
+            <span>12k</span>
+           
+        </div>
+        <div class="span">
+            <img src="download (2).png" id="img1">
+            <img src="images.jpg" alt="" id="img2">
+            <img src="images.png" alt="" id="img3">
+        </div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        
+            .container
+            {
+            height: 300px;
+            width: 450px;
+            background-color:  rgb(219, 219, 150);
+            border: 1px solid black;
+            margin: 10px;
+            }
+
+       .triangle1{
+            height:0px;
+            width: 0px;
+            border-left: 225px solid transparent;
+            border-right: 225px solid transparent;
+            border-bottom: 220px solid lightpink;
+            position: relative;
+        }
+        .triangle2{
+
+            height:0px;
+            width: 0px;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 250px solid rgb(255, 126, 145);
+            transform: rotate(90deg);
+            position:relative;
+            
+        }
+        .triangle3{
+
+                height:0px;
+                width: 0px;
+                border-left: 150px solid transparent;
+                border-right: 150px solid transparent;
+                border-bottom: 250px solid rgb(255, 126, 145);
+                transform: rotate(-90deg);
+                position:relative;
+               
+}
+        .triangle4{
+            height:0px;
+            width: 0px;
+            border-left: 225px solid transparent;
+            border-right: 225px solid transparent;
+            border-bottom: 220px solid lightpink;
+            position: relative;
+           
+           
+}
+  
+    </style>
+</head>
+<body>
+  
+        <div class="container"></div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+        <div class="triangle1"></div>
+        <div class="triangle4"></div>
+
+   
+  
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: cyan;
+        }
+        .container{
+            perspective: 1000px;
+        }
+        .flipper{
+            transition: transform 0.6s ease;
+            height: 400px;
+            width: 300px;
+            transform-style: preserve-3d;
+            border-radius: 5px;
+            transform-style: preserve-3d;
+        }
+        
+        .front-face, .back-face{
+            overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 1rem;
+                    backface-visibility: hidden;
+                    backdrop-filter: blur(10px);
+                    position: absolute;
+        }  
+        .back-face{
+            transform: rotateY(180deg);
+           background-color: white;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    padding: 1rem;
+                    gap: 2rem;
+        }
+        img{
+            object-fit: cover;
+            height: 400px;
+            width: 300px;
+        }
+        .back-img{
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            border: 5px solid rgb(26, 207, 177);
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .icons{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .fa-brands{
+            background-color: cyan;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+        }
+        .fa-brands:hover{
+            color:cyan;
+            background-color: white;
+            border: 2px solid cyan;
+            transition: all 0.2s ease-in;
+        }
+        .container:hover .flipper{
+                    transform: rotateY(180deg) ;
+                }
+             
+                .front-face{
+                    border: 5px solid white;   
+                }
+               
+            </style>
+</head>
+<body>
+    <div class="container">
+         <div class="flipper">
+             <div class="front-face">
+                <img " src="attractive-young-bearded-man-blue-checkered-shirt-white-tshirt-looks-selfconfident-poses-orange-background_197531-29482.avif" alt="">
+            </div> 
+            <div class="back-face">
+                
+                    <img  class="back-img" src="attractive-young-bearded-man-blue-checkered-shirt-white-tshirt-looks-selfconfident-poses-orange-background_197531-29482.avif" alt="">
+                
+               <div class="text">
+                <h1>coding lab</h1>
+                <p>user interface designer and fron-end developer</p>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+              
+              
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>

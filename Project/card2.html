@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient( to right, lightblue, lightgreen);
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            width: 700px;
+            height: 350px;
+           
+        }
+        .rightbox img{
+            height: 350px;
+            width: 350px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            max-height: 350px;
+            height: 350px;
+        }
+        
+        .leftbox{
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+           width: 350px;
+            height: 350px;
+            align-items: center;
+            width: 310px;
+            padding: 10px;
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+        }
+        @media screen and (max-width:680px){
+            .leftbox {
+            text-wrap: wrap;
+            width:auto;
+            height: auto;
+            border-radius: 0px;
+        }
+        .rightbox img{
+            height: auto;
+            width: auto;
+            border-radius: 0px;
+        }
+            
+        }
+        @media screen and (max-width:580px){
+            .card{
+                flex-direction: column;
+            }
+        .leftbox {
+            text-wrap: wrap;
+            width: 350px;
+            height: auto;
+            border-radius: 0px;
+        }
+        .rightbox img{
+            height: auto;
+            width: 350px;
+            border-radius: 0px;
+        }
+        p{
+            width: auto;
+        }
+        h2{
+            width: auto;
+        }
+        @media screen and (max-width:380px){
+            .leftbox {
+            text-wrap: wrap;
+            width:auto;
+            height: auto;
+            border-radius: 0px;
+        }
+        .rightbox img{
+            height: auto;
+            width: auto;
+            border-radius: 0px;
+        }
+        #li li{
+            flex-direction: column;
+        }
+        #li p{
+            flex-direction: column;
+            display: block;
+        }
+        }
+    }
+        h1{
+            padding-top: 40px;
+            width: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0);
+        }
+        p{
+            width: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0);
+        }
+        #li{
+            display: flex;
+            flex-direction: row;
+            justify-content:  space-between;
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0);
+                }
+        #li li{
+            list-style: none;
+            display: inline;
+            float: left;
+            background: rgba(0, 0, 0, 0);
+            color: white;
+        }
+        #li p{
+            display: inline;
+            background: rgba(0, 0, 0, 0);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+        <div class="leftbox">
+            <h1>Get Insights That help your Business Grow</h1>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore assumenda nisi quod in ipsum!</P>
+            <ul id="li">
+                <li>10k <br><p>Comments</p></li>
+                <li>214 <br><p>Paod users</p></li>
+                <li> 12M+ <br> <p>Views</p></li>
+            </ul>
+
+        </div>
+        <div class="rightbox">
+            <img src="images (1).jpg" alt="">
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to right, lightblue, lightgreen);
+            font-family: Arial, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 700px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        }
+        .leftbox{
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            color: white;
+        }
+        .rightbox img{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        h1, p {
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        ul li {
+            text-align: center;
+        }
+        @media screen  {
+            .card {
+                flex-direction: column;
+            }
+            .leftbox, .rightbox {
+                border-radius: 0;
+            }
+            .rightbox img {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="leftbox">
+                <h1>Get Insights That help your Business Grow</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore assumenda nisi quod in ipsum!</p>
+                <ul>
+                    <li>10k <br><p>Comments</p></li>
+                    <li>214 <br><p>Paid users</p></li>
+                    <li>12M+ <br> <p>Views</p></li>
+                </ul>
+            </div>
+            <div class="rightbox">
+                <img src="images (1).jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ -->

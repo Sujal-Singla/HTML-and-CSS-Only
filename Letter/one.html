@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background-color: #3498db;
+    }
+
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      transform-origin: 0 0;
+    }
+
+    .top {
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 50px solid #2ecc71;
+      top: 0;
+      left: 0;
+    }
+
+    .bottom {
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-top: 50px solid #e74c3c;
+      bottom: 0;
+      left: 0;
+      transform: translateY(-100%);
+    }
+
+    .left {
+      border-top: 75px solid transparent;
+      border-bottom: 75px solid transparent;
+      border-right: 50px solid #f39c12;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%) rotate(90deg);
+    }
+
+    .right {
+      border-top: 75px solid transparent;
+      border-bottom: 75px solid transparent;
+      border-left: 50px solid #8e44ad;
+      top: 0;
+      right: 0;
+      transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="triangle top"></div>
+    <div class="triangle bottom"></div>
+    <div class="triangle left"></div>
+    <div class="triangle right"></div>
+  </div>
+</body>
+</html>

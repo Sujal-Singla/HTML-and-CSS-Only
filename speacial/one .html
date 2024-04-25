@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .heart
+        {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            transform: rotate(-45deg);
+            margin: 50px;
+            animation: beat 1s ease alternate infinite;
+           position: relative;
+        }
+        .heart:after, 
+        .heart:before{
+            content:'';
+            height: 50px;
+            width: 50px;
+            background-color: rgb(255, 0, 0);
+            transform: rotate(-45deg);
+            border-radius: 50%;
+            position: absolute;
+            
+            
+        }
+        .heart:after{
+            top: 0px;
+            left: 25px;
+        }
+        .heart:before{
+            top: -25px;
+            right: 0px;
+        }
+        @keyframes beat {
+
+            0% {
+                transform: scale(1); rotate: -45deg;
+            }
+            50% {
+                transform: scale(1.2);rotate: -45deg;
+            }
+        }
+      
+
+        .container{
+            height: 300px;
+            width: 450px;
+            background-color: rgb(187, 52, 202);
+            position: relative;
+            z-index: 0;
+        }
+        .container::after{
+            position: absolute;
+            content: "";
+            border-left: 225px solid transparent;
+            border-right: 225px solid transparent;
+            border-bottom: 200px solid rgb(167, 122, 192);
+          /*  outline: 1px solid black; */
+           bottom: 0;
+           z-index: 3;
+        }
+        .container::before{
+            position: absolute;
+            content: "";
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 275px solid rgb(112, 78, 130);
+           transform: rotate(90deg);
+           bottom: 0;
+           top: 0;
+           z-index: 3;
+        }
+        .triangle{
+            position: absolute;
+           
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 275px solid rgb(112, 78, 130);
+           transform: rotate(-90deg);
+           bottom: 0;
+           top: 0;
+           right: 0;
+           z-index: 2;
+           
+        }
+        .triangle2{
+            position: absolute;
+            
+            border-left: 225px solid transparent;
+            border-right: 225px solid transparent;
+            border-bottom: 200px solid rgb(208, 81, 231);
+           /*  outline: 1px solid black; */
+           top: 0%;
+           transform: rotateZ(180deg);
+           z-index: 4;
+           
+        
+           
+        }
+        p{
+            position: absolute;
+            
+            text-align: center;
+            font-size: 100px;
+            color: black;
+            z-index: 0;
+            top: 0;
+        }
+        .card {
+            height: 250px;
+            width: 400px;
+            background-color: rgb(177, 52, 202);
+            position: relative;
+            cursor: pointer;
+            margin: 0 auto;
+           
+  
+}
+
+        .container:hover .card{
+              bottom: 260px;
+              transition: bottom 6s ease;
+             z-index: 6;
+            }
+           
+        .container:hover .triangle2{
+            top: -67%;
+            transform: rotatey(180deg);
+            transition:all 0.3s ease;
+        }
+          
+           
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="heart"></div>
+            <a href="#">click here</a>
+        </div>
+        <div class="triangle"></div>
+            <span class="triangle2"></span>
+          
+    <div class="triangle3"></div>
+        
+    </div>
+   
+</body>
+</html>

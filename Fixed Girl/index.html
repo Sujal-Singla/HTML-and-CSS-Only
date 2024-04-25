@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Image Slider</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: yellow;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  max-width: 550px;
+  filter: contrast(90%);
+  pointer-events: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.swiper-slide {
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  letter-spacing: 0.3rem;
+  z-index: 5;
+  color: transparent;
+  background-position: 0 0;
+  animation: animated-text 20s linear infinite;
+}
+
+@keyframes animated-text {
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.one,
+.five {
+  -webkit-text-stroke: 1px rgba(16, 104, 31, 0.8);
+  background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e9d06cb6-2844-49ed-9bde-23d3364b9fa4);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.two,
+.three,
+.four,
+.six {
+  -webkit-text-stroke: 1px #fff;
+  background: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ba4edde6-822d-437a-88c2-f54392d7a56f);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+}
+
+#slide1:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(-300%);
+}
+
+#slide5:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(-400%);
+}
+
+#slide6:checked ~ .swiper .swiper-wrapper {
+  transform: translateX(-500%);
+}
+
+    </style>
+</head>
+<body>
+    <input type="radio" name="slider" id="slide1" >
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <input type="radio" name="slider" id="slide5">
+    <input type="radio" name="slider" id="slide6">
+
+    <section>
+        <img class="hero" src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c62efd51-f844-4335-ba29-70ea35521dd8" alt="" />
+        
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide one">
+                    <h1 class="title">Edinburgh</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1bdebd02-d675-4469-be36-dc248448980d" alt="" />
+                </div>
+
+                <div class="swiper-slide two">
+                    <h1 class="title">Stockholm</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/62411bbf-dde9-4654-9298-1fe3e7da2d64" alt="" />
+                </div>
+
+                <div class="swiper-slide three">
+                    <h1 class="title">Paris</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/b49c729f-65b0-4a2a-baf7-1d9f180df0a6" alt="" />
+                </div>
+
+                <div class="swiper-slide four">
+                    <h1 class="title">Brugge</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/c9a61071-c74d-4e8b-966a-6948cdbd9665" alt="" />
+                </div>
+
+                <div class="swiper-slide five">
+                    <h1 class="title">Bavaria</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/25ab6cb7-9251-4aa5-9993-32ebd8542616" alt="" />
+                </div>
+
+                <div class="swiper-slide six">
+                    <h1 class="title">Copenhagen</h1>
+                    <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/365656bc-24bc-4d95-92da-7f34faa616cf" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

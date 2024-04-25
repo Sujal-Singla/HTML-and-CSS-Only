@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        min-height: 100vh;
+        width: 100vw;
+        background-image: url('nikon-dslr-camera_600x338-mm-90.jpg');
+        background-size: cover;
+        background-repeat: no-repeat ;
+    }
+
+    .container{
+        height: 100%;
+        width: 100%;
+    }
+    .navbar
+    {
+        height: 3.5rem;
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-between;
+  
+        text-align: center;
+        background-color: rgb(46, 44, 44);
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .features{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 1.5rem;
+        position: relative;
+        right: 3rem;
+        height: 2rem;
+    }
+    .features a{
+        text-decoration: none;
+        color: white;
+        padding: 0;
+    }
+    .logo a{
+        position: relative;
+        left: 3rem;
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+    }
+    a{
+       
+        width: 6rem;
+    }
+    a:hover{
+        background-color: white;
+        color: black;
+        border-radius: 0.3rem;
+        
+        transition: background-color 0.6s ease;
+    }
+    .display{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        flex-direction: column;
+        overflow:hidden;
+        box-sizing: border-box;
+        height: calc(100% - 3.5rem);
+        width: 60%;
+        margin: 0 auto;
+    }
+    h2{ 
+        font-size: 5rem;
+        text-align: center;
+        color: white;
+    }
+    .buttons{
+        width: 35rem;
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+       
+    }
+    .button1 button{
+        height: 3.5rem;
+        width: 7.5rem;
+        background-color: rgba(0, 128, 0, 0);
+        border: 1px solid rgb(255, 255, 255);
+        font-size: 1.5rem;
+        border-radius: 0.3rem;
+    }
+    .button2 button{
+        height: 3.5rem;
+        width: 7.5rem;
+        border-radius: 0.3rem;
+        border: 1px solid rgba(0, 0, 0, 0);
+        font-size: 1.5rem;
+    }
+    .button1 button:hover{
+        background-color: white;
+        transition: background-color 0.6s ease;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">CodingLab</a>
+            </div>
+            
+            <div class="features">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                <a href="#">Feedback</a>
+            </div>
+        </div>
+        <div class="display">
+            <h2>Create amazing website with HTML and CSS</h2>
+                <div class="buttons">
+            <div class="button1">
+                <button>Learn more</button>
+            </div>
+            <div class="button2">
+                 <button>Subscribe</button>
+            </div>
+                </div>
+        </div>
+        
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>

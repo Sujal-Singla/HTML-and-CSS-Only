@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: end;
+            background-color: rgb(182, 182, 182);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .content{
+            width: 100%;
+        }
+        .container{
+            width: 100vw;
+            position: static;
+            border: 1px solid black;
+           height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(20, 8, 99);
+            color: white;
+        }
+        .nav
+        {
+            width: 100vw;
+            padding: 2rem;
+            display: flex;
+            border: 1px solid black;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+        }  
+        
+        .h2{
+            font-size: 50px;
+            margin-left: 5rem;
+        }
+        .social-media{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          
+            font-size: 30px;
+            gap: 2rem;
+          margin-right: 5rem;
+        }
+
+        i{
+            cursor: pointer;
+         padding: 0.6rem;  
+         border-radius: 50%;
+         color: white;    
+        }
+        .fa-facebook{
+            color: white;
+            background-color: rgb(0, 102, 255); 
+           
+        }
+        .fa-twitter
+        {
+            color: white;
+            background-color: rgb(0, 187, 255);
+        }
+        .fa-instagram{
+            background-color: rgb(255, 0, 128);
+        }
+        .fa-linkedin{
+            background-color:  rgb(0, 102, 255);
+        }
+        .fa-youtube{
+            background-color:rgb(255, 0, 128);
+        }
+        .hero{
+            width: 100%;
+            padding: 2rem;
+            display: grid;
+            font-size: 20px;
+            /* gap: 2rem; */
+            grid-template-columns: repeat(5,1fr);
+            justify-content: center;
+            line-height: 3rem;
+        }
+        .headings{
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+    transition: all 0.6s ease;
+        }
+        input[type="email"]{
+            height: 3rem;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 1rem;
+            font-size: 20px;
+            color: white;
+            border-radius: 10px;
+        }
+        ::placeholder{
+            color: rgb(176, 176, 176);
+        }
+        button{
+            height: 3rem;
+            border-radius: 10px;
+            font-size: 30px;
+            color: rgb(20, 8, 99);
+            cursor: pointer;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .hr{
+            width: 100%;
+        }
+        hr{
+            position: relative;
+            bottom: 3px;
+            width: 55px;
+            border-radius: 50%;
+            border: 1.7px solid white ;
+        }
+        .footer{
+            width: 100%;
+            background-color: rgb(11, 4, 70);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;   
+            font-size: 20px;
+        }
+        .a{
+            font-size: 20px;
+            margin-right: 2rem;
+            display: flex;
+            gap: 3rem;
+        }
+        a:hover{
+            text-decoration:underline;
+            transition: all 0.6s ease;
+        }
+        i:hover{
+            transition: all 0.3s ease;
+        }
+        .fa-facebook:hover{
+            color: rgb(0, 102, 255);
+            background-color: white;
+           
+        }
+        .fa-twitter:hover
+        {
+            color: rgb(0, 187, 255);
+            background-color: white;
+        }
+        .fa-instagram:hover{
+            background-color: white;
+            color: rgb(255, 0, 128);
+        }
+        .fa-linkedin:hover{
+            color:rgb(0, 102, 255) ;
+            background-color:  white;
+        }
+        .fa-youtube:hover{
+            color: rgb(255, 0, 128);
+            background-color:white;
+        }
+        button:hover{
+            background-color: rgb(223, 222, 222);
+            transition :all 0.3s ease;
+        }
+        @media screen and (min-width: 1700px) {
+    .hero {
+        grid-template-columns: repeat(5, 1fr);
+    }           
+}
+
+@media screen and (max-width: 1700px) {
+    .hero {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 960px) {
+    .hero {
+        grid-template-columns: repeat(3, 2fr);
+    }           
+}
+
+@media screen and (max-width: 640px) {
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    @media screen and (max-width: 450px) {
+    .hero {
+        grid-template-columns: repeat(1, 1fr);
+    }
+   
+}
+    @media screen and (max-width: 565px){
+        .social-media{
+        flex-direction: column;
+    }
+    }
+
+        
+    </style>
+</head>
+<body>
+    <footer class="content">
+        <div class="container">
+            <div class="nav">
+                <div class="heading">
+                    <div class="h2">Act On PC 2.O</div>
+                </div>
+                <div class="social-media">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+            <hr class="hr">
+            <div class="hero">
+                <div class="headings">
+                    <h2>Company</h2>
+                    <hr>
+                    <a href="#">Home Design</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Get Started</a>
+                </div>
+                <div class="headings">
+                    <h2>Service</h2>
+                    <hr>
+                    <a href="#">App design</a>
+                    <a href="#">Web Design</a>
+                    <a href="#">Logo Design</a>
+                    <a href="#">Banner design</a>
+                </div>
+                <div class="headings">
+                    <h2>Account</h2>
+                    <hr>
+                    <a href="#">Profile</a>
+                    <a href="#">My Account</a>
+                    <a href="#">Prefrences</a>
+                    <a href="#">Purchase</a>
+                </div>
+                <div class="headings">
+                    <h2>Courses</h2>
+                    <hr>
+                    <a href="#">HTML&CSS</a>
+                    <a href="#">Javascript</a>
+                    <a href="#">Photography</a>
+                    <a href="#">Photoshop</a>
+                </div>
+                <div class="buttons">
+                    <div class="head">
+                        <h2>Subscribe us</h2>
+                        <hr>
+                    </div>
+                   
+                    <input type="Email" placeholder="Enter Your Email">
+                    <button>Subscribe</button>
+                </div>
+                
+            </div>
+            <div class="footer">
+                <div class="para">
+                    <p>copyright  &copy; 2021 ActOnPC2.o. All Rights Reserved</p>
+                </div>
+              
+               <div class="a">
+                <a href="#" >Privacy Policy</a>
+                        <a href="#" >Terms and Conditions</a>
+               </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

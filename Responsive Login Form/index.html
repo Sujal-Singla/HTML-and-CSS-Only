@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: blue;
+        }
+       .container{
+        height: 500px;
+        max-width: 400px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
+        color: white;
+        margin: 0 auto;
+       }
+       .wrapper{
+        width: 100%;
+        
+       }
+       h2{
+        color: white;
+        text-align: center;
+        text-justify: center;
+        position: relative;
+        top: 1.2rem;
+       }
+       .header{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 15%;
+        background-color: rgb(21, 245, 196);
+        
+       }
+       #email{
+        height: 50%;
+        width: 85%;
+        border-radius: 0.3rem;
+        border: 0.5px solid grey;
+
+       }
+       .info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 25%;
+        gap: 0.6rem;
+       }
+       #password{
+        height: 50%;
+        width: 85%;
+        border-radius: 0.3rem;
+        border: 0.5px solid grey;
+       }
+       .a1{
+        color: rgb(21, 245, 196);
+        text-decoration: none;
+        position: relative;
+        left: 2rem;
+        top: 0.5rem;
+        
+       }
+       .login {
+        height: 10%;
+        width: 85%;
+        border-radius: 0.3rem;
+        text-decoration: none;
+        color: rgb(21, 245, 196);
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color:rgb(21, 245, 196);
+        top: 1.5rem;
+        border: 0.5px solid grey;
+        left: 2rem;
+       }
+       .a2{
+        text-decoration: none;
+        color: white;
+       }
+       p{
+        display: inline;
+        position: relative;
+        color: black;
+        top: 3rem;
+       }
+       .new-member{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+       }
+       .new-member a{
+        color: rgb(21, 245, 196);
+        position: relative;
+        top: 3rem;
+        text-decoration: none;
+           }
+           ::placeholder{
+            position: relative;
+            left: 0.5rem;
+           }
+    </style>
+    <title>Responsive Div</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container">
+        <div class="header">
+            <h2>Login Form</h2>
+    
+        </div>
+        <div class="info">
+            <label for="email"></label>
+        <input type="text" id="email" placeholder="Email or Phone">
+        <label for="password"></label>
+        <input type="password" id="password" placeholder="Password">
+        </div>
+        
+        <a href="#" class="a1">Forgot Password?</a>
+        <div class="login">
+            <a href="#" class="a2">Login</a>
+        </div>
+        <div class="new-member">
+            <p>Not a Member?</p>
+        <a href="#">Signup Now</a>
+        </div>
+        
+    </div>
+    
+</div>
+
+</body>
+</html>

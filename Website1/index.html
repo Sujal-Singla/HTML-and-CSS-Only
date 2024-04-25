@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuckify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-color: beige;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .circle1
+        {
+            height: 20rem;
+            width: 20rem;
+            position: absolute;
+            top: 15rem;
+            left: 10rem;
+            border-radius: 50%;
+            background:linear-gradient(160deg, #0094e970 0%, #80d0c78c 100%);
+        }
+        .circle2
+        {
+            height: 15rem;
+            width: 15rem;
+            position: absolute;
+            top: 18rem;
+            right: 25rem;
+            border-radius: 50%;
+            background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);     
+        }
+        .circle3
+        {
+            height: 15rem;
+            width: 15rem;
+            position: absolute;
+            top: 10rem;
+            right: 20rem;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+        }
+        .circle4
+        {
+            height: 15rem;
+            width: 15rem;
+            position: absolute;
+            top: 20rem;
+            right: 15rem;
+            border-radius: 50%;
+            background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+        }
+        .navbar{
+          
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 3rem;      
+            padding-right: 3rem;
+            align-items: end;
+            height: 6rem;
+        }
+        .logo img{
+            
+            height: 5rem;
+
+        }
+        .features
+        {
+            
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 35rem;
+            align-items:end ;
+        }
+        .features a{
+            text-decoration: none;
+            color: rgb(41, 40, 40);
+        }
+        .searchbar{
+          
+            height: 2rem;
+            display: flex;
+            align-items: center;
+
+        }
+        .searchbar input{
+            height: 2rem;
+            border-radius: 10px;
+          
+            padding-left: 2rem;
+            position: relative;
+            font-size: 20px;
+
+        }
+        
+        .searchbar i{
+            position: absolute;
+          
+            color: black;
+            font-size: 30px;
+        }
+        .hero {
+       
+        min-height: calc(100VH - 6REM); /* Set the height to 100% of the viewport height */
+        display: flex;
+        justify-content: space-between;
+        
+        
+        }
+        .IMAGE
+        {
+            height: 100%;
+        }
+        .text-content{
+           
+            position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+            z-index: 5;
+        
+            margin-left: 12rem;
+        }
+        .text-content .p1{
+            font-size: 20px;
+
+        }
+    
+        .text-content .p2{
+            font-size: 70px;
+
+        }
+        .text-content .p3{
+            font-size: 25px;
+        }
+        .animated {
+           
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            font-size: 25px;
+            gap: 0.4rem;
+            width: 20rem;
+            
+        }
+        .animate{
+            white-space: nowrap;
+            animation: display 5s steps(18) infinite;
+            overflow: hidden;
+        }
+        @keyframes display {
+            0%{width: 0ch;}
+            
+            50%{width: 18ch;}
+            100%{width: 0ch;}
+          
+        }
+        button{
+            cursor: pointer;
+            height: 2rem;
+            width: 6rem;
+            margin: 1rem;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 10px;
+            background: linear-gradient(to right, rgb(142, 70, 156), rgb(55, 55, 226));
+        }
+        .image img{
+            position: relative;
+            right: 14rem;
+            z-index: 1;
+            height: 40rem;
+          top: 3rem;
+          overflow: hidden;
+          
+        }
+        @media screen and  (max-width: 1190px){
+            .navbar{
+                flex-direction: column;
+                align-items: center;
+            }            
+            .hero{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .image img{
+                height: auto;
+                width: auto;
+            }
+
+        }
+        </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="download__4_-removebg-preview.png" alt="">
+            </div>
+            <div class="features">
+                <a href="#">Home</a>
+                <a href="#">Latest</a>
+                <a href="#">Cateogary</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="searchbar">
+                <input type="search" placeholder="Search Items">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+            <div class="hero">
+                <div class="text-content">
+                    <p class="p1">Hello, It's Me</p>
+                    <p class="p2"> Sujal Singla</p>
+                    <div class="animated">
+                        <p class="p3">and I'M a 
+                            <br>
+                                <p class="animate"> Youtuber and Coder</p>
+                        </p>
+                    </div>
+                    <div class="buttons">
+                        <button>About me</button>
+                    <button>Follow Me</button>
+                    </div>
+                    
+                </div>
+                <div class="image">
+                    <img src="IMG_20240112_114406__1___1_-removebg-preview.png" alt="">
+                </div>
+            </div>
+           
+            <div class="icons"></div>
+        </div>
+    </div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
+    <div class="circle4"></div>
+    <script src="1.js"></script>
+</body>
+</html>

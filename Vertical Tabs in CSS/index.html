@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: -100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container{
+           
+            height: 30rem;
+            width: 60rem;
+            overflow: scroll;
+            box-shadow: 0px 1px 7px -2px black;
+            border-radius: 20px;
+           
+        }
+        h1{
+            margin: 2.5rem;
+        }
+        .home{
+            display: flex;
+            gap: 4rem;
+            width: 100%;
+            
+            
+        }
+        .home p{
+            
+            font-size:20px;
+        }
+        .button1{
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            gap: 01rem;
+            height: 3rem;
+            width: 8rem;
+          
+            position: relative;
+            left: 2.5rem;
+            border: 1px solid black;
+        }
+        .button1 button {
+            height: 100%;
+            width: 100%;
+            border: none;
+            background-color:  rgba(0, 128, 0, 0);
+            position: absolute;
+            font-size: 1.5rem;
+            text-align: right;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: rgb(37, 37, 37);
+        }
+        .content{
+            width: 100%;
+            gap: 2rem;
+        }
+        .content h2{
+            font-size: 35px;
+        }
+        .home i{
+        font-size: 1.8rem;
+        text-align: left; 
+        color: rgb(37, 37, 37); 
+        }
+        #home{
+           display: none;
+        }
+        #home:checked + label .button1 {
+            background-color: purple;
+            color: white;
+        }
+        #home:checked + label button {
+            
+            color: white;
+        }
+        #home:checked + label i {
+            
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Vertical Tabs</h1>
+        <div class="home">
+            <input type="checkbox" id="home" name="button1">
+            <label for="home">
+               
+                <div class="button1">
+               
+                    <i class="fa-solid fa-house"></i>
+                    <button>Home</button>
+                </div>
+            </label>
+           
+            
+            <div class="content">
+                <h2>Home Content</h2>
+                <br>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minus quisquam ipsum quis! Distinctio sunt inventore explicabo corrupti commodi ad odit aliquam dolor quam a molestias maxime corporis eos iure perspiciatis, dolore voluptatibus blanditiis! Architecto odit repellendus quod cumque nesciunt nisi rerum, quis magni soluta nam, deserunt quidem recusandae animi accusantium ullam sed enim eius voluptatem doloremque mollitia ipsam laboriosam harum. Hic porro exercitationem, animi repellat recusandae accusantium dolorem eos iste assumenda explicabo, necessitatibus eaque ullam sequi officia ut aperiam fuga labore, consequuntur ipsum. Id eius at nobis molestias magni quis reiciendis iste sed earum, accusamus voluptate voluptatem in explicabo?</p>
+            </div>
+            </div>
+            <div class="blog">
+                
+                <div class="button">
+                    <i class="fa-solid fa-blog"></i>
+                    
+                    <input type="submit" value="Blog">
+                </div>
+                
+                <div class="content">
+                    <h2>Blog Content</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minus quisquam ipsum quis! Distinctio sunt inventore explicabo corrupti commodi ad odit aliquam dolor quam a molestias maxime corporis eos iure perspiciatis, dolore voluptatibus blanditiis! Architecto odit repellendus quod cumque nesciunt nisi rerum, quis magni soluta nam, deserunt quidem recusandae animi accusantium ullam sed enim eius voluptatem doloremque mollitia ipsam laboriosam harum. Hic porro exercitationem, animi repellat recusandae accusantium dolorem eos iste assumenda explicabo, necessitatibus eaque ullam sequi officia ut aperiam fuga labore, consequuntur ipsum. Id eius at nobis molestias magni quis reiciendis iste sed earum, accusamus voluptate voluptatem in explicabo?</p>
+                </div>
+                <div class="help">
+                    
+                    <div class="button">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="submit" value="Help">
+                    </div>
+                    
+                    <div class="content">
+                       
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minus quisquam ipsum quis! Distinctio sunt inventore explicabo corrupti commodi ad odit aliquam dolor quam a molestias maxime corporis eos iure perspiciatis, dolore voluptatibus blanditiis! Architecto odit repellendus quod cumque nesciunt nisi rerum, quis magni soluta nam, deserunt quidem recusandae animi accusantium ullam sed enim eius voluptatem doloremque mollitia ipsam laboriosam harum. Hic porro exercitationem, animi repellat recusandae accusantium dolorem eos iste assumenda explicabo, necessitatibus eaque ullam sequi officia ut aperiam fuga labore, consequuntur ipsum. Id eius at nobis molestias magni quis reiciendis iste sed earum, accusamus voluptate voluptatem in explicabo?</p>
+                    </div>
+        </div>
+        <div class="code">
+            <h2>Code</h2>
+            <div class="button">
+                <i class="fa-solid fa-house"></i>
+                <button></button>
+            </div>
+            
+            <div class="content">
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minus quisquam ipsum quis! Distinctio sunt inventore explicabo corrupti commodi ad odit aliquam dolor quam a molestias maxime corporis eos iure perspiciatis, dolore voluptatibus blanditiis! Architecto odit repellendus quod cumque nesciunt nisi rerum, quis magni soluta nam, deserunt quidem recusandae animi accusantium ullam sed enim eius voluptatem doloremque mollitia ipsam laboriosam harum. Hic porro exercitationem, animi repellat recusandae accusantium dolorem eos iste assumenda explicabo, necessitatibus eaque ullam sequi officia ut aperiam fuga labore, consequuntur ipsum. Id eius at nobis molestias magni quis reiciendis iste sed earum, accusamus voluptate voluptatem in explicabo?</p>
+            </div>
+            <div class="About">
+                <h2>About</h2>
+                <div class="button">
+                    <i class="fa-solid fa-house"></i>
+                    <input type="submit" value="About">
+                </div>
+                
+                <div class="content">
+                  
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel minus quisquam ipsum quis! Distinctio sunt inventore explicabo corrupti commodi ad odit aliquam dolor quam a molestias maxime corporis eos iure perspiciatis, dolore voluptatibus blanditiis! Architecto odit repellendus quod cumque nesciunt nisi rerum, quis magni soluta nam, deserunt quidem recusandae animi accusantium ullam sed enim eius voluptatem doloremque mollitia ipsam laboriosam harum. Hic porro exercitationem, animi repellat recusandae accusantium dolorem eos iste assumenda explicabo, necessitatibus eaque ullam sequi officia ut aperiam fuga labore, consequuntur ipsum. Id eius at nobis molestias magni quis reiciendis iste sed earum, accusamus voluptate voluptatem in explicabo?</p>
+                </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-image: url('A7UbR3.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.sidebar{
+    height: 100%;
+    width: 15%;
+    border: 1px solid rgb(151, 136, 136);
+    position:relative;
+    left: -15rem;
+    color: white;
+    
+   backdrop-filter: blur(10px);
+}
+h2{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.features a{
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    flex-direction: column;
+    filter: drop-shadow(2px 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+ a{
+    height: 4rem;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    
+ }
+i{
+    height: 2rem;
+    width: 2rem;
+    
+    position: absolute;
+    
+    z-index: 1;
+}
+.button{
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+i{
+    color: white;
+}
+.button2{
+    position: absolute;
+    left: 13rem;
+   top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    z-index: 1;
+}
+#check .button{
+    position: absolute;
+}
+#check:checked ~.sidebar {
+    left: 0rem;
+    transition: left 0.3s ease;
+    box-shadow: 0px 0px 10px -1px white;
+}
+/* ... (previous styles) */
+
+#check:checked +.button i,
+#check:checked + .button2 i {
+   opacity: 0;
+   transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+#check:checked +.button2 i {
+   opacity: 1;
+   transition: opacity 0.3s ease
+}
+
+/* ... (remaining styles) */
+
+#check{
+    /* display: none; */
+    position: absolute;
+
+}
+a:hover{
+    box-shadow: 0px 0px 10px -1px white;
+    transition :box-shadow 0.6s ease
+
+}
+
+
+#check{
+    display: none;
+}
+#check1{
+    display: none;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="icon"></div> -->
+    <input type="checkbox" id="check">
+    <div class="button">
+        <label for="check">
+            <i class="fa-solid fa-bars" id="icon2"></i>
+        </label>
+        
+    </div>
+   
+   
+    <div class="sidebar">
+       
+        <div class="button2">
+            <label for="check">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        
+        <h2>ActOnPc</h2>
+        <div class="features">
+            
+                <a href="DASHBOARD">Dashboard</a>
+                <a href="SHORTCUTS">Shortcuts</a>
+                <a href="OVERVIEW">Overview</a>
+                <a href="EVENTS">Events</a>
+                <a href="ABOUT">About</a>
+                <a href="SERVICES">Services</a>
+                <a href="CONATACT">Contact</a>
+                <a href="FEEDBACK">Feedback</a>
+              
+                </div>
+            </div>
+        
+        </body>
+
+</html>

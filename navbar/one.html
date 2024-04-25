@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggleable Sidebar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            transform: translateX(-250px);
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+
+        #toggle-btn {
+            display: none;
+        }
+
+        #open-btn,
+        #close-btn {
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        #close-btn {
+            display: none;
+        }
+
+        #toggle-btn:checked + .container .sidebar {
+            transform: translateX(0);
+        }
+
+        #toggle-btn:checked + .container .content {
+            margin-left: 250px;
+        }
+
+        #toggle-btn:checked + .container #open-btn {
+            display: none;
+        }
+
+        #toggle-btn:checked + .container #close-btn {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<input type="checkbox" id="toggle-btn">
+<div class="container">
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="content">
+        <label for="toggle-btn" id="open-btn">&#x02190; Open Sidebar</label>
+        <label for="toggle-btn" id="close-btn">&#x02190; Close Sidebar</label>
+        <h2>Main Content</h2>
+        <p>Your page content goes here.</p>
+    </div>
+</div>
+
+</body>
+</html>

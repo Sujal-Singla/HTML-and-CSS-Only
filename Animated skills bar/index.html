@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(21, 83, 255);
+        }
+        .container{
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            font-size: 20px;
+            border: 1px solid rgb(189, 185, 185);
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: rgb(223, 223, 223);
+        }
+        hr{
+            height: 0.4rem;
+            background-color: rgb(236, 236, 236); 
+            border: none;  
+            border-radius: 20px;
+            position: relative;
+        }
+        .html hr::after{
+            content: "";
+            position: absolute;
+            height: 0.4rem;
+            width: 23rem;
+            background-color: rgb(21, 83, 255);
+            z-index: 10;
+           animation-name: slider;
+           animation-duration: 0.6s;
+           animation-timing-function: ease;
+           animation-delay: 0s;
+           animation-iteration-count: 1;
+           animation-fill-mode: forwards;
+        }
+        .node hr::after{
+            content: "";
+            position: absolute;
+            height: 0.4rem;
+            width: 10rem;
+            background-color: rgb(21, 83, 255);
+            z-index: 10;
+            animation-name: slider;
+           animation-duration: 0.6s;
+           animation-timing-function: ease;
+           animation-delay: 0s;
+           animation-iteration-count: 1;
+           animation-fill-mode: forwards;
+        }
+        .css hr::after{
+            content: "";
+            position: absolute;
+            height: 0.4rem;
+            width: 15rem;
+            background-color: rgb(21, 83, 255);
+            z-index: 10;
+            animation-name: slider;
+           animation-duration: 0.6s;
+           animation-timing-function: ease;
+           animation-delay: 0s;
+           animation-iteration-count: 1;
+           animation-fill-mode: forwards;
+        }
+        .percentage{
+            opacity: 0;
+            text-align: right;
+            position: relative;
+            z-index: 12;
+            color: white;
+        }
+        .js hr::after{
+            content: "";
+            position: absolute;
+            height: 0.4rem;
+            width: 12rem;
+            background-color: rgb(21, 83, 255);
+            z-index: 10;
+            animation-name: slider;
+           animation-duration: 0.6s;
+           animation-timing-function: ease;
+           animation-delay: 0s;
+           animation-iteration-count: 1;
+           animation-fill-mode: forwards;
+        }
+        .percentage::before{
+            content: "";
+            height: 1.5rem;
+            width: 2.3rem;
+            position: absolute;
+            background-color: rgb(21, 83, 255);
+           border-radius: 5px;
+            z-index: -1;
+        }
+        .html:hover .percentage,
+        .css:hover .percentage,
+        .js:hover .percentage,
+        .node:hover .percentage {
+            transition: all 0.6s ease;
+            opacity: 1;
+        }
+        @keyframes slider {
+            0% { width: 0rem;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="html"> 
+            <p>Html</p>
+            <p class="percentage">90%</p>
+            <hr>
+        </div>
+        <div class="css"> 
+            <p>css</p>
+            <p class="percentage">60%</p>
+            <hr>
+        </div>
+        <div class="js"> 
+            <p>js</p>
+            <p class="percentage">40%</p>
+            <hr>
+        </div>
+        <div class="node"> 
+            <p>node</p>
+            <p class="percentage">30%</p>
+            <hr>
+        </div>
+       
+    </div>
+</body>
+</html>

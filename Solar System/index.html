@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image:url("istockphoto-1354982067-612x612 (1).jpg");
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+        }
+        .container{
+            height: 100%;
+            width:100%;
+          
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+            position: relative;
+        }
+        .orbit{
+            height: 35rem;
+            width:35rem;
+          border: 1px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+          /*   border: 1px solid white;   */
+            border-radius: 100%;
+            /* border-left: 0px solid transparent;
+        border-right: 0px solid transparent; 
+        border-bottom: 1px solid white;
+        border-top: 0px solid transparent; */
+          position: relative;
+          border-left: 0px solid transparent;
+        border-right: 0px solid transparent; 
+        border-bottom: 1px solid white;
+        border-top: 0px solid transparent;
+         /*  z-index: 10;
+           */
+            animation: sunRotation 36s linear infinite;
+         
+        }
+        .orbit::before{
+            content: "";
+            height: 35rem;
+            width:35rem;
+            border-radius: 50%;
+            border-left: 0px solid transparent;
+        border-right: 0px solid transparent; 
+        border-bottom: 1px solid white;
+        border-top: 0px solid transparent;
+
+        }
+
+    
+
+        @keyframes sunRotation {
+            0%{transform: rotate(0deg);
+              
+            }
+            100%{transform: rotate(360deg);
+            border: 1px;}
+        }
+        .sun
+        {
+            height: 10rem;
+            width: 10rem;
+            background-color: rgb(255, 238, 0);
+            border-radius: 100%;
+            position: absolute;  
+             box-shadow: 0px 0px 20px 10px rgb(255, 217, 0);
+
+        }
+        
+        /* .earth-moon{
+            display: flex;
+            align-items: end;
+           height: 10rem;
+           width: auto;
+            position: absolute;
+           
+            
+        } */
+        .earth{
+            
+            height: 4rem;
+            width: 4rem;
+            background-color: rgb(134, 179, 225);
+            position: absolute;
+            
+           /*  left: 22.5%; */
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0px 0px 20px -1px rgb(141, 141, 141);
+           /*  box-shadow: 0px 0px 20px -1px rgb(0, 98, 255); */
+           
+        }
+        .moon{
+            height:2rem;
+            width: 2rem;
+            background-color: grey;
+            position: absolute;
+            border-radius: 50%;
+            ;
+            left: 0rem;
+          bottom: 0rem;
+          box-shadow: 0px 0px 20px -1px rgb(141, 141, 141);
+        }
+       .earth-moon{
+        left: 3rem;
+        bottom: 0rem;
+        height: 7rem;
+        width: 7rem;
+        position: absolute;
+        /* bottom: -3rem; */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* justify-content: start; */
+        animation: moonRotation 2s linear infinite;
+        /* border: 1px solid white; */
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent; 
+        border-bottom: 1px solid white;
+        border-top: 0px solid transparent;
+       }
+       @keyframes  moonRotation{
+        0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+       }
+       .mercury{
+        height: 4rem;
+            width: 4rem;
+            background-color: rgb(134, 179, 225);
+            position: absolute;
+            
+           /*  left: 22.5%; */
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0px 0px 20px -1px rgb(141, 141, 141);
+           /*  box-shadow: 0px 0px 20px -1px rgb(0, 98, 255); */
+       }
+     
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="orbit">
+            <div class="sun"></div>
+            
+                <div class="mercury"></div>
+                <div class="earth-moon">
+                <div class="earth"></div>
+                <div class="moon"></div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>
